@@ -37,8 +37,8 @@ spec:
                 name: devboard-secrets
                 key: POSTGRES_DB
 
-          - name: POSTGRESS_URL
-            value: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}?sslmode=disable
+          - name: POSTGRES_URL
+            value: postgres://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:5432/$(POSTGRES_DB)?sslmode=disable
 
           - name: PORT
             value: "8080"
