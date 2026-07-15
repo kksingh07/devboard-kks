@@ -4,6 +4,7 @@ metadata:
   name: postgres
   namespace: devboard-kks
 spec:
+  clusterIP: None  # This creates a headless service
   selector:
     app: devboard-postgres
   ports:
